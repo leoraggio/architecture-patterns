@@ -16,3 +16,7 @@ distribution = true
 
 [tool.pdm.dev-dependencies]
 dev = ["pytest>=8.2.1", "mypy>=1.10.0", "ruff>=0.4.7"]
+
+[tool.pyright]
+"venvPath" = "."
+"venv" = ".venv"
