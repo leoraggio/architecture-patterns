@@ -3,9 +3,7 @@ name = "architecture-patterns"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Leonardo Raggio", email = "leonardo.raggio@gmail.com" }]
-dependencies = [
-    "sqlalchemy>=2.0.30",
-]
+dependencies = ["sqlalchemy>=2.0.30"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = { text = "MIT" }
@@ -18,5 +16,15 @@ distribution = true
 dev = ["pytest>=8.2.1", "mypy>=1.10.0", "ruff>=0.4.7"]
 
 [tool.pyright]
-"venvPath" = "."
-"venv" = ".venv"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "standard"
+reportUnusedImport = "warning"
+reportUnusedClass = "warning"
+reportUnusedFunction = "warning"
+reportUnusedVariable = "warning"
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportMatchNotExhaustive = "warning"
+
+[tool.ruff.lint]
+"select" = ["E", "F", "I"]
